@@ -11,8 +11,6 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
-import static dev.nohmobs.redstonebattery.RedstoneBattery.LOGGER;
-
 
 public class RedstoneBatteryClient implements ClientModInitializer {
 	@Override
@@ -32,34 +30,26 @@ public class RedstoneBatteryClient implements ClientModInitializer {
 
 	private static int getRedstoneColor(BlockState state) {
 		int power = state.getValue(RedstoneBatteryBlock.POWER);
-		LOGGER.info("POWER: {}", power);
 
 		List<Integer> possible_power_values = RedstoneBatteryBlock.POWER.getPossibleValues();
 		int max_power = possible_power_values.getLast();
-		LOGGER.info("MAX POWER: {}", max_power);
 
 		int unlit = 0x3D0000;
 		int lit = 0xFF0000;
-		LOGGER.info("UNLIT: {}", unlit);
-		LOGGER.info("LIT: {}", lit);
 
 		float amount = (float) power / (float) max_power;
-		LOGGER.info("AMOUNT: {}", amount);
 
 		int unlitR = (unlit >> 16) & 0xFF;
 		int unlitG = (unlit >> 8) & 0xFF;
 		int unlitB = unlit & 0xFF;
-		LOGGER.info("UNLIT R: {}", unlitR);
 
 		int litR = (lit >> 16) & 0xFF;
 		int litG = (lit >> 8) & 0xFF;
 		int litB = lit & 0xFF;
-		LOGGER.info("LIT R: {}", litR);
 
 		int r = (int) (unlitR + (litR - unlitR) * amount);
 		int g = (int) (unlitG + (litG - unlitG) * amount);
 		int b = (int) (unlitB + (litB - unlitB) * amount);
-		LOGGER.info("FINAL RED: {}", r);
 
 		return 0xFF000000 | (r << 16) | (g << 8) | b;
 	}
