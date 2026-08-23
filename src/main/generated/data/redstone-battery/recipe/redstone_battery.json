@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "multi_bench",
+  "key": {
+    "d": "minecraft:redstone",
+    "s": "minecraft:stone",
+    "t": "minecraft:redstone_torch"
+  },
+  "pattern": [
+    "sds",
+    "dtd",
+    "sds"
+  ],
+  "result": {
+    "id": "redstone-battery:redstone_battery"
+  }
+}
