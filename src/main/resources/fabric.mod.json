@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"dev.nohmobs.redstonebattery.client.RedstoneBatteryClient"
+		],
+		"fabric-datagen": [
+			"dev.nohmobs.redstonebattery.datagen.RedstoneBatteryDataGenerator"
 		]
 	},
 	"mixins": [
