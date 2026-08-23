@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "redstone-battery:item/redstone_battery_unlocked",
+    "particle": "redstone-battery:item/redstone_battery_unlocked"
+  }
+}
