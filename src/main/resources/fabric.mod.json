@@ -18,8 +18,8 @@
 		"main": [
 			"dev.nohmobs.redstonebattery.RedstoneBattery"
 		],
-		"fabric-datagen": [
-			"dev.nohmobs.redstonebattery.RedstoneBatteryDataGenerator"
+		"client": [
+			"dev.nohmobs.redstonebattery.client.RedstoneBatteryClient"
 		]
 	},
 	"mixins": [
