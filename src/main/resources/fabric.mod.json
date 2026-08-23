@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "redstone-battery",
+	"version": "${version}",
+	"name": "Redstone Battery",
+	"description": "Adds a Redstone Battery block that can be locked to preserve the redstone signal it was receiving.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT-license",
+	"icon": "assets/redstone-battery/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.nohmobs.redstonebattery.RedstoneBattery"
+		],
+		"fabric-datagen": [
+			"dev.nohmobs.redstonebattery.RedstoneBatteryDataGenerator"
+		]
+	},
+	"mixins": [
+		"redstone-battery.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

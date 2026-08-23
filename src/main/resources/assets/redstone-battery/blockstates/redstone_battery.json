@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "locked=false": {
+      "model": "redstone-battery:block/redstone_battery_unlocked"
+    },
+    "locked=true": {
+      "model": "redstone-battery:block/redstone_battery_locked"
+    }
+  }
+}
