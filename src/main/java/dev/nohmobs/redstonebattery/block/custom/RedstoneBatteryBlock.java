@@ -53,8 +53,11 @@ public class RedstoneBatteryBlock extends Block {
     @Override
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
-        if (!level.isClientSide() && !state.getValue(LOCKED)) {
-            level.scheduleTick(pos, this, 1);
+        if (!level.isClientSide()) {
+            if (!state.getValue(LOCKED)) {
+                level.scheduleTick(pos, this, 1);
+            }
+            level.updateNeighborsAt(pos, this);
         }
     }
 
@@ -70,6 +73,11 @@ public class RedstoneBatteryBlock extends Block {
         if (!state.getValue(LOCKED)) {
             level.setBlock(pos, getSignalFromNeighbours(state, level, pos), 3);
         }
+    }
+
+    @Override
+    protected boolean isSignalSource(final BlockState state) {
+        return true;
     }
 
     @Override
