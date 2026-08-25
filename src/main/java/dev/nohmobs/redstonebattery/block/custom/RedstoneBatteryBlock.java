@@ -118,7 +118,7 @@ public class RedstoneBatteryBlock extends Block {
         for (Direction direction : Direction.values()) {
             BlockPos neighbourPos = pos.relative(direction);
 
-            totalSignal += level.getSignal(neighbourPos, direction.getOpposite());
+            totalSignal += level.getSignal(neighbourPos, direction);
         }
 
         int finalPower = Math.min(totalSignal, POWER.getPossibleValues().getLast());
