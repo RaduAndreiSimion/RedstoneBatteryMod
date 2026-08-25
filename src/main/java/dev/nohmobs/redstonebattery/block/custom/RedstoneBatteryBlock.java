@@ -2,15 +2,19 @@ package dev.nohmobs.redstonebattery.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.BlockItemStateProperties;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -38,6 +42,20 @@ public class RedstoneBatteryBlock extends Block {
                 LOCKED,
                 POWER
         );
+    }
+
+    @Override
+    protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
+        ItemStack stack = new ItemStack(this.asItem());
+
+        if (includeData) {
+            stack.set(DataComponents.BLOCK_STATE,
+                    BlockItemStateProperties.EMPTY
+                            .with(LOCKED, state.getValue(LOCKED))
+                            .with(POWER, state.getValue(POWER)));
+        }
+
+        return stack;
     }
 
     @Override
