@@ -49,11 +49,6 @@ public class DirectionalRedstoneBatteryBlock extends RedstoneBatteryBlock {
         return state.rotate(mirror.getRotation((Direction)state.getValue(FACING)));
     }
 
-    @Override
-    protected boolean isSignalSource(final BlockState state) {
-        return true;
-    }
-
     protected int getSignal(final BlockState state, final BlockGetter level, final BlockPos pos, final Direction direction) {
         return state.getValue(LOCKED) && state.getValue(FACING) == direction.getOpposite() ? state.getValue(POWER) : 0;
     }
