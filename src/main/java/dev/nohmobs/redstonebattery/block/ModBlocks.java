@@ -3,12 +3,14 @@ package dev.nohmobs.redstonebattery.block;
 import dev.nohmobs.redstonebattery.RedstoneBattery;
 import dev.nohmobs.redstonebattery.block.custom.DirectionalRedstoneBatteryBlock;
 import dev.nohmobs.redstonebattery.block.custom.RedstoneBatteryBlock;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -17,7 +19,13 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.function.Function;
 
 public class ModBlocks {
-    public static void initialise() {}
+    public static void initialise() {
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.REDSTONE_BLOCKS)
+                .register((creativeTab) -> {
+                    creativeTab.accept(ModBlocks.REDSTONE_BATTERY);
+                    creativeTab.accept(ModBlocks.DIRECTIONAL_REDSTONE_BATTERY);
+                });
+    }
 
     public static final Block REDSTONE_BATTERY = register(
             "redstone_battery",
