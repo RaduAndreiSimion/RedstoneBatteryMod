@@ -19,6 +19,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     @Override
     public void generate() {
         dropSelfWithStates(ModBlocks.REDSTONE_BATTERY, RedstoneBatteryBlock.LOCKED, RedstoneBatteryBlock.POWER);
+        dropSelfWithStates(ModBlocks.DIRECTIONAL_REDSTONE_BATTERY, RedstoneBatteryBlock.LOCKED, RedstoneBatteryBlock.POWER);
     }
 
     public void dropSelfWithStates(Block block, Property<?>... properties) {

@@ -17,9 +17,11 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
     protected void addTags(HolderLookup.Provider registries) {
 
         valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.REDSTONE_BATTERY);
+                .add(ModBlocks.REDSTONE_BATTERY)
+                .add(ModBlocks.DIRECTIONAL_REDSTONE_BATTERY);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.REDSTONE_BATTERY);
+                .add(ModBlocks.REDSTONE_BATTERY)
+                .add(ModBlocks.DIRECTIONAL_REDSTONE_BATTERY);
     }
 }

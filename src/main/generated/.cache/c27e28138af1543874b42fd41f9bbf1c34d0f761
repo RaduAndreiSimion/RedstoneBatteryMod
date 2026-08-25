@@ -1,2 +1,3 @@
 // 26.1.2	-999999999-01-01T00:00:00	Redstone Battery/Block Loot Tables
+203a20c86e9c2f6cf2a21e7a854d8e50d40e6c72 data/redstone-battery/loot_table/blocks/directional_redstone_battery.json
 93eafd7ed62fb1bb65cdb1b654a760f604df2ed0 data/redstone-battery/loot_table/blocks/redstone_battery.json

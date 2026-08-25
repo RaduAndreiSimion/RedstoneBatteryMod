@@ -1,5 +1,6 @@
 {
   "values": [
-    "redstone-battery:redstone_battery"
+    "redstone-battery:redstone_battery",
+    "redstone-battery:directional_redstone_battery"
   ]
 }

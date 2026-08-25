@@ -1,0 +1,6 @@
+{
+  "parent": "redstone-battery:block/directional_redstone_battery",
+  "textures": {
+    "base": "redstone-battery:block/redstone_battery_base_unlocked"
+  }
+}

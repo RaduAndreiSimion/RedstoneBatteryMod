@@ -1,6 +1,7 @@
 package dev.nohmobs.redstonebattery.block;
 
 import dev.nohmobs.redstonebattery.RedstoneBattery;
+import dev.nohmobs.redstonebattery.block.custom.DirectionalRedstoneBatteryBlock;
 import dev.nohmobs.redstonebattery.block.custom.RedstoneBatteryBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -23,6 +24,12 @@ public class ModBlocks {
             RedstoneBatteryBlock::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)
             );
+
+    public static final Block DIRECTIONAL_REDSTONE_BATTERY = register(
+            "directional_redstone_battery",
+            DirectionalRedstoneBatteryBlock::new,
+            BlockBehaviour.Properties.ofFullCopy(ModBlocks.REDSTONE_BATTERY)
+    );
 
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties properties) {
         ResourceKey<Block> blockKey = keyOfBlock(name);

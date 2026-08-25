@@ -1,0 +1,43 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:block_state",
+    "block_state_property": "locked",
+    "cases": [
+      {
+        "when": "false",
+        "model": {
+          "type": "minecraft:model",
+          "model": "redstone-battery:block/directional_redstone_battery_unlocked",
+          "tints": [
+            {
+              "type": "redstone-battery:redstone_power"
+            }
+          ]
+        }
+      },
+      {
+        "when": "true",
+        "model": {
+          "type": "minecraft:model",
+          "model": "redstone-battery:block/directional_redstone_battery_locked",
+          "tints": [
+            {
+              "type": "redstone-battery:redstone_power"
+            }
+          ]
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "redstone-battery:block/directional_redstone_battery_unlocked",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -12779520
+        }
+      ]
+    }
+  }
+}

@@ -1,3 +1,5 @@
 // 26.1.2	-999999999-01-01T00:00:00	Redstone Battery/RedstoneBatteryRecipeProvider
+09b04d36af7dd1ee39a7cf9417e8ff0cdef4996d data/redstone-battery/advancement/recipes/redstone/directional_redstone_battery.json
 98735b0320f3342eca6f8a3dfe48ae21f9eb03e1 data/redstone-battery/advancement/recipes/redstone/redstone_battery.json
-b3aea914434a1e11207cb1e951f86857083a6579 data/redstone-battery/recipe/redstone_battery.json
+1de284186605f46d7b0efeb70af7dde64cd1d34e data/redstone-battery/recipe/directional_redstone_battery.json
+fd919d1adc457ab731b77f20dd151cca582da9f1 data/redstone-battery/recipe/redstone_battery.json

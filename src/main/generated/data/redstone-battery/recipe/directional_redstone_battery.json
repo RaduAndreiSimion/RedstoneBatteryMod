@@ -1,18 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
-  "group": "redstone_battery",
+  "group": "directional_redstone_battery",
   "key": {
     "d": "minecraft:redstone",
+    "r": "minecraft:repeater",
     "s": "minecraft:stone",
     "t": "minecraft:redstone_torch"
   },
   "pattern": [
     "sds",
-    "dtd",
+    "dtr",
     "sds"
   ],
   "result": {
-    "id": "redstone-battery:redstone_battery"
+    "id": "redstone-battery:directional_redstone_battery"
   }
 }

@@ -33,8 +33,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('s', Blocks.STONE)
                         .define('d', Blocks.REDSTONE_WIRE)
                         .define('t', Items.REDSTONE_TORCH)
-                        .group("multi_bench")
+                        .group("redstone_battery")
                         .unlockedBy(getHasName(Blocks.REDSTONE_WIRE), has(Blocks.REDSTONE_WIRE))
+                        .save(output);
+
+                shaped(RecipeCategory.REDSTONE, ModBlocks.DIRECTIONAL_REDSTONE_BATTERY)
+                        .pattern("sds")
+                        .pattern("dtr")
+                        .pattern("sds")
+                        .define('s', Blocks.STONE)
+                        .define('d', Blocks.REDSTONE_WIRE)
+                        .define('t', Items.REDSTONE_TORCH)
+                        .define('r', Blocks.REPEATER)
+                        .group("directional_redstone_battery")
+                        .unlockedBy(getHasName(Blocks.REPEATER), has(Blocks.REPEATER))
                         .save(output);
             }
         };

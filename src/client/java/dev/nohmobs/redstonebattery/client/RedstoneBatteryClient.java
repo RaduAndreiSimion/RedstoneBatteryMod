@@ -16,6 +16,7 @@ public class RedstoneBatteryClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		BlockColorRegistry.register(List.of(new RedstoneBatteryBlockTintSource()), ModBlocks.REDSTONE_BATTERY);
+		BlockColorRegistry.register(List.of(new RedstoneBatteryBlockTintSource()), ModBlocks.DIRECTIONAL_REDSTONE_BATTERY);
 		ItemTintSources.ID_MAPPER.put(Identifier.fromNamespaceAndPath(RedstoneBattery.MOD_ID, "redstone_power"), RedstoneBatteryItemTintSource.CODEC);
 	}
 }

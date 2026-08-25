@@ -1,0 +1,62 @@
+{
+  "variants": {
+    "locked=false,facing=down": {
+      "model": "redstone-battery:block/directional_redstone_battery_unlocked",
+      "x": 90,
+      "uvlock": true
+    },
+    "locked=true,facing=down": {
+      "model": "redstone-battery:block/directional_redstone_battery_locked",
+      "x": 90,
+      "uvlock": true
+    },
+    "locked=false,facing=up": {
+      "model": "redstone-battery:block/directional_redstone_battery_unlocked",
+      "x": -90,
+      "uvlock": true
+    },
+    "locked=true,facing=up": {
+      "model": "redstone-battery:block/directional_redstone_battery_locked",
+      "x": -90,
+      "uvlock": true
+    },
+    "locked=false,facing=north": {
+      "model": "redstone-battery:block/directional_redstone_battery_unlocked",
+      "uvlock": true
+    },
+    "locked=true,facing=north": {
+      "model": "redstone-battery:block/directional_redstone_battery_locked",
+      "uvlock": true
+    },
+    "locked=false,facing=south": {
+      "model": "redstone-battery:block/directional_redstone_battery_unlocked",
+      "y": 180,
+      "uvlock": true
+    },
+    "locked=true,facing=south": {
+      "model": "redstone-battery:block/directional_redstone_battery_locked",
+      "y": 180,
+      "uvlock": true
+    },
+    "locked=false,facing=west": {
+      "model": "redstone-battery:block/directional_redstone_battery_unlocked",
+      "y": -90,
+      "uvlock": true
+    },
+    "locked=true,facing=west": {
+      "model": "redstone-battery:block/directional_redstone_battery_locked",
+      "y": -90,
+      "uvlock": true
+    },
+    "locked=false,facing=east": {
+      "model": "redstone-battery:block/directional_redstone_battery_unlocked",
+      "y": 90,
+      "uvlock": true
+    },
+    "locked=true,facing=east": {
+      "model": "redstone-battery:block/directional_redstone_battery_locked",
+      "y": 90,
+      "uvlock": true
+    }
+  }
+}

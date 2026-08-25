@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "functions": [
+    {
+      "block": "redstone-battery:directional_redstone_battery",
+      "function": "minecraft:copy_state",
+      "properties": [
+        "locked",
+        "power"
+      ]
+    }
+  ],
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "redstone-battery:directional_redstone_battery"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

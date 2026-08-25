@@ -1,3 +1,4 @@
 {
-  "block.redstone-battery.redstone_battery": "Redstone Battery"
+  "block.redstone-battery.redstone_battery": "Redstone Battery",
+  "block.redstone-battery.directional_redstone_battery": "Directional Redstone Battery"
 }
