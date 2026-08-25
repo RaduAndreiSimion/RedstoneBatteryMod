@@ -5,7 +5,7 @@
 	"name": "Redstone Battery",
 	"description": "Adds a Redstone Battery block that can be locked to preserve the redstone signal it was receiving.",
 	"authors": [
-		"Me!"
+		"NoHMobs"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
