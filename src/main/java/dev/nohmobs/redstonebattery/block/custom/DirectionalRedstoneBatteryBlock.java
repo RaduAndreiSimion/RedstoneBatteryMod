@@ -37,7 +37,7 @@ public class DirectionalRedstoneBatteryBlock extends RedstoneBatteryBlock {
 
     @Override
     public @Nullable BlockState getStateForPlacement(final BlockPlaceContext context) {
-        Direction placementDirection = context.getClickedFace();
+        Direction placementDirection = context.getNearestLookingDirection().getOpposite();
         return this.defaultBlockState().setValue(FACING, placementDirection);
     }
 
