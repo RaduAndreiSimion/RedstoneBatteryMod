@@ -11,12 +11,6 @@ repositories {
 	// for more information about repositories.
 }
 
-fabricApi {
-	configureDataGeneration {
-		client = true
-	}
-}
-
 loom {
 	splitEnvironmentSourceSets()
 
@@ -25,6 +19,13 @@ loom {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
+	}
+}
+
+fabricApi {
+	configureDataGeneration {
+		createSourceSet = true
+		modId = "redstone-battery-datagen"
 	}
 }
 
